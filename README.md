@@ -1,28 +1,40 @@
 # Social Login
 
-## Git clone
 
-Clone the repo locally:
+## Requirements
+
 ```
-git clone https://github.com/MyatTheingiAung/social-login.git
+PHP 7.4
+MySQL 5.7 or 8
 ```
 
 ## Installation
 
+Clone the repo locally:
 ```
-composer install
-copy env.example .env
-php artisan key:generate
-create database 
+git clone https://github.com/MyatTheingiAung/social-login.git
+cd social-login
 ```
 
-## Database Migration
+Install PHP dependencies:
+```
+composer install
+```
+
+Setup configuration:
+```
+copy env.example .env
+```
+
+Generate application key:
+```
+php artisan key:generate
+```
 
 Run database migrations:
 ```
 php artisan migrate
 ```
-## Run
 
 Run the dev server:
 ```
@@ -40,7 +52,7 @@ Database **eg.**
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=car_seller
+DB_DATABASE=social
 DB_USERNAME=root
 DB_PASSWORD=
 ```

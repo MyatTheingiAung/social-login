@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\GoogleLoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,8 +17,8 @@ use App\Http\Controllers\DashboardController;
 */
 
 Route::get('/',[LoginController::class,'index'])->name('login');
-Route::get('auth/google', [LoginController::class, 'redirectToGoogle']);
-Route::get('auth/google/callback', [LoginController::class, 'handleGoogleCallback']);
+Route::get('auth/google', [GoogleLoginController::class, 'redirectToGoogle']);
+Route::get('auth/google/callback', [GoogleLoginController::class, 'handleGoogleCallback']);
 
 Route::get('/dashboard',[DashboardController::class,'index'])->name('dashboard')->middleware('auth');
-Route::get('/logout',[DashboardController::class,'logout'])->name('logout');
+Route::get('/logout',[LoginController::class,'logout'])->name('logout');

@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\Auth;
-
 class DashboardController extends Controller
 {
     public function index()
@@ -11,8 +9,5 @@ class DashboardController extends Controller
         return view('dashboard');
     }
 
-    public function logout(){
-        Auth::logout();
-        return redirect()->route('login');
-    }
+    
 }
