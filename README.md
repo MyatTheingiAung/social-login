@@ -66,3 +66,12 @@ Create Google ID in following link:
 > https://console.cloud.google.com/apis/dashboard
 
 
+GITHUB ID and Secret Key
+```
+GITHUB_CLIENT_ID=
+GITHUB_CLIENT_SECRET=
+```
+Create Github ID in following link:
+> https://github.com/settings/developers
+
+

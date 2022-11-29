@@ -31,9 +31,11 @@
                             <hr>
                             <div>
                                 <div class="mb-3">
-                                    <a href="{{ url('auth/google') }}" class="btn btn-warning text-white d-block">Login with Google</a>
+                                    <a href="{{ url('auth/google') }}" class="btn btn-danger text-white d-block">Login with Google</a>
                                 </div>
-
+                                <div class="mb-3">
+                                    <a href="{{ url('auth/github') }}" class="btn btn-dark text-white d-block">Login with Github</a>
+                                </div>
                             </div>
                         </form>
                     </div>
